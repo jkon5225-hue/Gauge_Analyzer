@@ -1,6 +1,6 @@
 # Bourdon Tube Pressure Gauge Analyzer (ブルドン管圧力計 画像解析ツール)
 
-このリポジトリは、ブルドン管圧力計（または連成計）の画像を自動解析し、OCRによるスケール範囲（最小値・最大値）の抽出と、幾何学的アプローチ（ハフ変換を用いた針の検出とセンター補正）による高精度な圧力値の算出を行うPythonプログラムです。
+このリポジトリは、ブルドン管圧力計（または連成計）の画像を自動解析し、OCRによるスケール範囲（最小値・最大値）の抽出と、幾何学的アプローチ（ハフ変換を用いた針の検出とセンター補正）による圧力値の算出を行うPythonプログラムです。
 
 ## 💡 技術的特徴・設計のこだわり (Technical Highlights)
 
@@ -53,7 +53,7 @@ pip install opencv-python numpy easyocr
 2. スクリプトを実行します。
 
 ```bash
-python main.py
+python Pressure_Gauge_Analyzer.py
 ```
 
 3. 処理が完了すると、コンソールに検出されたスケール範囲と最終的な解析圧力が出力されます。また、`output/` フォルダ内にデバッグ用の画像が出力されます。
@@ -62,9 +62,9 @@ python main.py
 
 ```text
 .
-├── main.py            # メインの解析プログラム（リファクタリング済み）
-├── moto meter.jpg     # 解析対象の圧力計画像（サンプル）
-└── output/            # デバッグ画像および処理用一時フォルダ
+├── Pressure_Gauge_Analyzer.py            # メインの解析プログラム（リファクタリング済み）
+├── moto meter.jpg     　　　　　　　　　　 # 解析対象の圧力計画像（サンプル）
+└── output/                               # デバッグ画像および処理用一時フォルダ
     ├── out_sample2.jpg
     ├── meter_line.jpg
     └── fallback_*.jpg
@@ -72,20 +72,8 @@ python main.py
 
 ## 📄 ライセンスと著作権 (License & Copyright)
 
-* **著作権 (Copyright)**: © 2026 Bourdon Gauge Analyzer Project. All rights reserved.
+* **著作権 (Copyright)**: © 2026 Freelancer JOE. All Rights Reserved.
 * **ライセンス (License)**: 本ソフトウェアは **Apache License 2.0** のもとで公開されています。
-  
-  Licensed under the Apache License, Version 2.0 (the "License");
-  you may not use this file except in compliance with the License.
-  You may obtain a copy of the License at
-
-      http://www.apache.org/licenses/LICENSE-2.0
-
-  Unless required by applicable law or agreed to in writing, software
-  distributed under the License is distributed on an "AS IS" BASIS,
-  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  See the License for the specific language governing permissions and
-  limitations under the License.
 
 ## 📝 注意事項
 
